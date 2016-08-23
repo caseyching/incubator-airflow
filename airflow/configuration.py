@@ -109,6 +109,8 @@ defaults = {
         'expose_config': False,
         'workers': 4,
         'worker_class': 'sync',
+        'web_server_ssl_cert': None,
+        'web_server_ssl_key': None
     },
     'scheduler': {
         'statsd_on': False,
@@ -239,6 +241,11 @@ web_server_host = 0.0.0.0
 
 # The port on which to run the web server
 web_server_port = 8080
+
+# Paths to the SSL certificate and key for the web server. When both are
+# provided SSL will be enabled. This does not change the web server port.
+web_server_ssl_cert =
+web_server_ssl_key =
 
 # The time the gunicorn webserver waits before timing out on a worker
 web_server_worker_timeout = 120
